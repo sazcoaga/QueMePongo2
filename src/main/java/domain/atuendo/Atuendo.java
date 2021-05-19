@@ -11,4 +11,10 @@ public class Atuendo {
   void cargarPrenda(Prenda ... unasPrendas){
     Collections.addAll(prendas, unasPrendas);
   }
+
+/*
+  List<Prenda> atuendoParaTemperatura(double temperatura){
+
+  }
+*/
 }

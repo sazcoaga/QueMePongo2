@@ -2,12 +2,14 @@ package domain.atuendo;
 
 import static java.util.Objects.requireNonNull;
 
+
 public class Prenda {
 
   TipoPrenda tipo;
   Material material;
   Color colorPrincipal;
   Color colorSecundario;
+  double temperaturaMax;
 
   Prenda(TipoPrenda tipo, Material material, Color colorPrincipal){
     this.tipo = requireNonNull(tipo, "tipo de prenda obligatorio");
@@ -29,6 +31,9 @@ public class Prenda {
     return tipo.getCategoria();
   }
 
+  boolean esAptaTemperatura(double temperatura){
+    return temperatura <= temperaturaMax;
+  }
 
 
 
