@@ -1,5 +1,10 @@
 qmp6 pseudocodigo 
 
+
+//Aclaraciones
+//No comprendí mucho el enunciado así que traté de diseñar algún pseudocódigo, pregunto las dudas en clase
+
+
 class Usuario{
 
 String mail 
