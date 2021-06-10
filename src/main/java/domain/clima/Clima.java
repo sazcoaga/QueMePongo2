@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Clima {
@@ -26,6 +27,12 @@ public class Clima {
 
   public double convertidorACelsius(int temperatura){
     return (( temperatura - 32) * 5/9);
+  }
+
+  public List<String> obtenerAlertas(){
+     Map<String, Object> alertas = apiClima.getAlertas("Buenos Aires");
+     return alertas.get("CurrentAlerts");
+
   }
 }
 

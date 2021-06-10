@@ -33,4 +33,15 @@ private Random selectorPrenda = new Random();
     int numeroPrenda = selectorPrenda.nextInt(opciones.size());
     return opciones.get(numeroPrenda);
   }
+
+  Atuendo sugerenciaDiaria(){
+    Atuendo atuendo = new Atuendo();
+    Prenda calzado = seleccionarPrenda(RepositorioPrendas.getInstance().getCalzados());
+   Prenda superior = seleccionarPrenda(RepositorioPrendas.getInstance().getPartesSuperiores());
+    Prenda inferior = seleccionarPrenda(RepositorioPrendas.getInstance().getPartesInferiores());
+    atuendo.cargarPrenda(superior, inferior, calzado);
+    return atuendo;
+  }
+
+
 }
